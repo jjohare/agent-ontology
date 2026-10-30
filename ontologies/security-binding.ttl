@@ -52,7 +52,7 @@ sec:TrustAnchor a owl:Class ;
 #################################################################
 
 sec:hasKeyMaterial a owl:ObjectProperty ;
-    rdfs:domain agent:Agent ;
+    rdfs:domain core:Agent ;
     rdfs:range sec:KeyMaterial ;
     rdfs:label "hasKeyMaterial" .
 
@@ -73,7 +73,7 @@ sec:verifiedBy a owl:ObjectProperty ;
 
 sec:signsRecord a owl:ObjectProperty ;
     rdfs:domain sec:KeyMaterial ;
-    rdfs:range ledger:LedgerRecord ;
+    rdfs:range ledger:LedgerEvent ;
     rdfs:label "signsRecord" ;
     rdfs:comment "Indicates ledger entries signed using this key material." .
 

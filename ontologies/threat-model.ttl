@@ -131,7 +131,11 @@ tm:delegatesTask a owl:ObjectProperty ;
 
 # Agents cannot claim contradictory capabilities (Minimal Disjoint Axiom)
 tm:CriticalCapability a owl:Class ;
+    rdfs:subClassOf tm:Capability ;
     owl:disjointWith tm:RestrictedCapability .
+
+tm:RestrictedCapability a owl:Class ;
+    rdfs:subClassOf tm:Capability .
 
 # Semantic consistency between Intent and Task
 tm:IntentAlignsWithTask a owl:ObjectProperty ;
